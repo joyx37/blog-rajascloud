@@ -1,0 +1,47 @@
+baseURL = "https://blog.rajascloud.com/"
+languageCode = "en-us"
+title = "Ajoy's Blog"
+theme = "PaperMod"
+pagerSize = 10
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  description = "Malware analysis and security notes"
+  author = "Ajoy"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+
+  [params.homeInfoParams]
+    Title = "Hi, I'm Ajoy"
+    Content = "Notes on malware analysis and reverse engineering."
+
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 10
+[[menu.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 20
+[[menu.main]]
+  name = "Search"
+  url = "/search/"
+  weight = 30
+
+[markup.highlight]
+  noClasses = false
